@@ -1,0 +1,98 @@
+/* --- General Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* --- Header & Navigation Bar Styling --- */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.4s ease, padding 0.4s ease; /* Smooth transition for changes */
+}
+
+/* Style for the header WHEN it has the 'scrolled' class */
+#main-header.scrolled {
+    background-color: #0d1b2a; /* Dark blue background on scroll */
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Style for menu items on HOVER */
+nav ul li a:hover {
+    background-color: #00b4d8;
+    color: #fff;
+}
+
+/* --- Main Content Sections --- */
+.content-section {
+    height: 100vh; /* Make each section fill the screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Specific styling for the first section to have a background image */
+#home {
+    background: linear-gradient(rgba(20, 39, 68, 0.7), rgba(20, 39, 68, 0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
+    color: #fff;
+}
+
+#home h1 {
+    font-size: 3.5em;
+}
+
+#home p {
+    font-size: 1.2em;
+}
+
+#about, #contact {
+    background-color: #ffffff;
+}
